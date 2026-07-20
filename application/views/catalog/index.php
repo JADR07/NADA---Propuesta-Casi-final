@@ -1,0 +1,187 @@
+<?php  //$this->template->add_css($this->load->view('catalog/catalog_style'),'embed'); ?>
+<?php
+	//set default page size, if none selected
+	if(!$this->input->get("ps"))
+	{
+		$ps=15;
+	}
+?>
+
+<!-- Homepage banner: uses images/anda-home.jpg -->
+<style>
+.home-banner{background-color:#0a4b7a;border-radius:8px;padding:28px;margin-bottom:18px;color:#fff;background-size:cover;background-position:center}
+.home-banner .banner-inner{max-width:1150px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.home-banner .banner-left{max-width:68%}
+.home-banner h2{font-size:34px;margin:0 0 8px}
+.home-banner p.lead{margin:0 0 16px;color:rgba(255,255,255,0.95)}
+.home-search{display:flex;max-width:560px}
+.home-search input{flex:1;padding:12px 14px;border-radius:24px 0 0 24px;border:0}
+.home-search button{padding:10px 18px;border-radius:0 24px 24px 0;border:0;background:#0d2746;color:#fff}
+.home-banner .banner-right{min-width:260px}
+</style>
+
+<div class="home-banner" style="background-image: url('<?php echo base_url('images/anda-home.jpg');?>');">
+	<div class="banner-inner">
+		<div class="banner-left">
+			<h2>Catálogo ANDA</h2>
+			<p class="lead">Archivo Nacional de Datos y Metadatos — Accede a datos estadísticos oficiales para investigación y toma de decisiones.</p>
+			<form action="<?php echo site_url('catalog/search'); ?>" method="get" class="home-search" role="search">
+				<input type="search" name="q" placeholder="Buscar datasets, variables, temas..." aria-label="Buscar">
+				<button type="submit">Buscar</button>
+			</form>
+		</div>
+		<div class="banner-right">
+			<!-- small stats box area (optional) -->
+			<div class="card" style="background:rgba(255,255,255,0.95);padding:14px;border-radius:8px;color:#0b2b4a">
+				<div style="font-size:22px;font-weight:700">118</div>
+				<div style="font-size:12px">Operaciones estadísticas</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid">
+<?php //$this->load->view('catalog/catalog_page_links');?>
+
+<?php $error=$this->session->flashdata('error');?>
+<?php echo ($error!="") ? '<div class="alert alert-danger">'.$error.'</div>' : '';?>
+
+<?php $message=$this->session->flashdata('message');?>
+<?php echo ($message!="") ? '<div class="alert alert-success">'.$message.'</div>' : '';?>
+
+<h1 class="page-title">
+	<?php echo t('catalog_maintenance');?>
+    <?php if ( isset($this->active_repo->id)):?>
+    	<span class=""> \ <?php echo $this->active_repo->title;?></span><span class="link-change"><?php echo anchor('admin/repositories/select',t('change_repo'));?></span>
+    <?php endif;?>
+</h1>
+
+
+<div class="row">
+	<div id="side-bar" class="col-md-3">
+		<?php $this->load->view('catalog/index_sidebar'); //right side bar?>
+    </div>
+	<div class="col-md-9">
+		<?php if (!$rows): ?>
+			<div>
+				<?php echo t('no_records_found');?>
+				<a href="<?php echo site_url('admin/catalog');?>" class="btn btn-primary btn-sm"><?php echo t('reset_search');?></a>
+			</div>
+		<?php else:?>
+		<form  method="GET" id="catalog-search">
+			<div id="surveys">
+				<?php $this->load->view('catalog/search');?>
+			</div>    
+		</form>
+		<?php endif;?>
+
+	
+	</div>
+</div> 
+
+
+</div>
+
+
+<script type='text/javascript'>
+//translations	
+var i18n={
+		'no_item_selected':"<?php echo t('js_no_item_selected');?>",
+		'confirm_delete':"<?php echo t('js_confirm_delete');?>",
+		'js_loading':"<?php echo t('js_loading');?>",
+		'published':"<?php echo t('published');?>",
+		'unpublished':"<?php echo t('unpublished');?>"
+		};
+		
+$(".box .box-header").click(function(e){
+	toggle_sidebar(this);
+	return false;
+});
+
+function toggle_sidebar(e){
+	$(e).parent().toggleClass("iscollapsed");
+	$(e).parent().find(".box-body").toggleClass("collapse");
+}
+
+function search()
+{
+	data=$("#form_filter").serialize();
+	$("#form_filter").submit();
+	return;
+	$("#surveys").html('<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i><?php echo t('js_loading');?>');
+	$.ajax({
+		timeout:1000*120,
+		dataType: "html",
+		data:data,
+		type:'GET', 
+		url: CI.base_url+'/admin/catalog/search/',
+		success: function(data) {
+			$("#surveys").html(data);
+		},
+		error: function(XHR,err) {
+			$("#surveys").html("Error occured " + XHR.status + " - " + err);
+		}
+	});
+}
+
+jQuery(document).ready(function(){
+	//search using filter
+	$("#form_filter input[type=checkbox]").on("click",null,function(e){
+		search();
+	});
+	
+	$("#form_filter input[type=textbox]").on('keyup',null,function(event){		
+		if(event.keyCode==13){
+			search();
+		}
+	});
+
+	$("#form_filter select").on("change",null,function(e){
+		search();
+	});
+
+	$("#form_filter .apply-filter").on("click",null,function(e){
+		search();
+	});
+
+	//set max height for div and add vertical scroll bars 
+	var max_height = 100;
+	$('.scrollable').each(function(index) {
+		$(this).text();
+		var actual_height = $(this).height();
+		if (actual_height > max_height){
+			$(this).addClass('vscroll');
+		};
+	});
+
+	//publish/draft status
+	$('.publish-toggle').change(function() {
+		var studyid=$(this).attr("data-sid");
+		var form_data= {
+			'submit':'submit',
+			'<?php echo $this->security->get_csrf_token_name(); ?>': '<?php echo $this->security->get_csrf_hash(); ?>'
+		};
+		
+		if ($(this).prop('checked')){
+			status=1
+		}
+		else{
+			status=0
+		}
+
+		$.post(CI.base_url+'/admin/catalog/publish/'+studyid+'/'+status+'?ajax=1',form_data,
+			function(data){
+			//toggle_study_status( elem );
+			}, "json")
+			.fail(function() { 
+				$(this).prop('checked', !status).change();//undo status change
+				alert(i18n.update_failed);
+			});		
+    })
+
+	
+	
+});
+
+</script>
