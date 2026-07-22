@@ -48,7 +48,7 @@
                                             if (year < 2000)
                                                 year = year + 1900 + ", ";
                                             document.write(year); // End -->
-                                        </script> The World Bank Group, All Rights Reserved.
+                                        </script> The World Bank Group, All Rights Reserved
                                     </small>
 
                                 </p>

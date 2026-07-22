@@ -192,6 +192,18 @@
     font-size: 0.95rem;
     line-height: 1.6;
 }
+.logo-catalog {
+    height: 60px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.home-category-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 @media (max-width: 992px) {
     .home-hero .hero-top {
         flex-direction: column;
@@ -257,21 +269,30 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
 <div class="container home-categories">
     <div class="home-category-grid">
         <article class="home-category-card">
-            <div>
+            <div class="home-category-card-content">
+                <img src="<?php echo base_url();?>themes/nada52/images/icono-uno.png"
+                class="logo-catalog"
+                alt="ANDA Logo">
                 <h3>Censo</h3>
                 <p>Información recopilada en operativos censales nacionales.</p>
             </div>
             <a href="<?php echo site_url('catalog?sk=Censo'); ?>">Ver Censo →</a>
         </article>
         <article class="home-category-card">
-            <div>
+            <div class="home-category-card-content">
+                <img src="<?php echo base_url();?>themes/nada52/images/icono-dos.png"
+                class="logo-catalog"
+                alt="ANDA Logo">
                 <h3>Encuestas</h3>
                 <p>Datos obtenidos a través de encuestas por muestreo.</p>
             </div>
             <a href="<?php echo site_url('catalog?sk=Encuesta'); ?>">Ver Encuestas →</a>
         </article>
         <article class="home-category-card">
-            <div>
+            <div class="home-category-card-content">
+                <img src="<?php echo base_url();?>themes/nada52/images/icono-tres.png"
+                class="logo-catalog"
+                alt="ANDA Logo">
                 <h3>Registros Estadísticos</h3>
                 <p>Registros administrativos y operaciones continuas.</p>
             </div>
