@@ -1,0 +1,43 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dot grid pattern -->
+    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="5" fill="#a9c1ee"/>
+    </pattern>
+
+    <!-- Radial fade INSIDE each circle, so dot density fades toward the circle's own edge (halftone look) -->
+    <radialGradient id="fade-inside" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Hard circular boundary: dots never appear outside this circle -->
+    <clipPath id="circle-left">
+      <circle cx="400" cy="500" r="300"/>
+    </clipPath>
+    <clipPath id="circle-right">
+      <circle cx="1200" cy="500" r="300"/>
+    </clipPath>
+
+    <mask id="mask-left">
+      <circle cx="400" cy="500" r="300" fill="url(#fade-inside)"/>
+    </mask>
+    <mask id="mask-right">
+      <circle cx="1200" cy="500" r="300" fill="url(#fade-inside)"/>
+    </mask>
+  </defs>
+
+  <!-- White page background -->
+  <rect x="0" y="0" width="1600" height="1000" fill="#ffffff"/>
+
+  <!-- Left circle: dots clipped to a circle, horizontally centered in the left half, vertically centered on the page -->
+  <g clip-path="url(#circle-left)" mask="url(#mask-left)">
+    <rect x="100" y="200" width="600" height="600" fill="url(#dot-grid)"/>
+  </g>
+
+  <!-- Right circle: mirrored on the right half -->
+  <g clip-path="url(#circle-right)" mask="url(#mask-right)">
+    <rect x="900" y="200" width="600" height="600" fill="url(#dot-grid)"/>
+  </g>
+</svg>

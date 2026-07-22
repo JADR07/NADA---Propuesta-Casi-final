@@ -1,3 +1,11 @@
+<style>
+.full-row-footer-black-components  {
+    background-color: #17436F !important; 
+    color: #fff;
+    padding: 20px 0;
+}
+</style>
+
 <footer>
     <!-- footer top section -->
     <?php //include_once 'footer_top.php';?>
@@ -10,7 +18,7 @@
                 <div class="row">
 
                     <!-- / footer logo -->
-                    <div class="col-12 col-md-6">
+                    <!-- <div class="col-12 col-md-6">
 
                         <div class="text-center text-lg-left mt-2">
                         <?php /* logo ?>
@@ -26,7 +34,7 @@
                         <?php /* */?>
                         </div>
 
-                    </div>
+                    </div> -->
                     <!-- / footer logo -->
 
                     <!-- Copyrights-->
@@ -44,7 +52,8 @@
                                             if (year < 2000)
                                                 year = year + 1900 + ", ";
                                             document.write(year); // End -->
-                                        </script> <?php echo $this->config->item("website_title");?>, All Rights Reserved.
+                                        </script> <!-- <?php echo $this->config->item("website_title");?>, All Rights Reserved. -->
+                                                        <?php echo $this->config->item("website_title");?>, All Rights Reserved | Oficina Naional de Estadistica (ONE)
                                     </small>
 
                                 </p>
@@ -55,6 +64,11 @@
                     </div>
                     <!-- / Copyrights  -->
 
+                     <div class="col-12 col-md-6">
+                        <div class="text-center text-lg-right mt-2">
+                            <img src="<?php echo base_url();?>themes/nada52/images/one-footer.jpg" class="img-responsive" style="width: 100px;">
+                        </div>
+                     </div>
                 </div>
             </div>
         </div>

@@ -1,8 +1,17 @@
 ﻿<style>
+
+body {
+    background-image: url('<?php echo base_url();?>themes/nada52/images/page-bg-dots.svg');
+    background-repeat: no-repeat;
+}
 .home-hero {
     background: linear-gradient(135deg, #0e3f87 0%, #1b6dbd 100%);
     color: #fff;
     padding: 60px 0 40px;
+    position: relative;
+    top: -40px;
+    background-image: url('<?php echo base_url();?>themes/nada52/images/hero-banner-bg.svg');
+    background-size: cover;
 }
 .home-hero .hero-inner {
     max-width: 1200px;
@@ -24,6 +33,7 @@
     font-size: 3rem;
     margin: 0 0 14px;
     line-height: 1.05;
+    color: #fff;
 }
 .home-hero .hero-brand p {
     max-width: 660px;
@@ -77,7 +87,7 @@
     min-width: 0;
 }
 .home-hero .hero-search input::placeholder {
-    color: rgba(255,255,255,.72);
+    color: rgba(114, 113, 113, 0.72);
 }
 .home-hero .hero-search button {
     min-height: 56px;
@@ -86,9 +96,7 @@
     padding: 0 30px;
     font-weight: 700;
 }
-.home-hero .hero-actions {
-    margin-top: 14px;
-}
+
 .home-hero .hero-actions a {
     color: #fff;
     font-weight: 600;
@@ -204,6 +212,16 @@
     align-items: center;
     text-align: center;
 }
+
+.vertical-bar {
+    width: 1px;
+    height: 70px;
+    background-color: #acabab;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
 @media (max-width: 992px) {
     .home-hero .hero-top {
         flex-direction: column;
@@ -256,10 +274,10 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
 
         <div class="hero-search">
             <form class="input-group" method="get" action="<?php echo site_url('catalog'); ?>">
-                <input class="form-control" type="search" placeholder="Buscar datasets, variables, temas..." name="sk" aria-label="Buscar">
+                <input class="form-control bg-white" type="search" placeholder="Buscar datasets, variables, temas..." name="sk" aria-label="Buscar">
                 <button class="btn btn-primary" type="submit">Buscar</button>
             </form>
-            <div class="hero-actions">
+            <div class="hero-actions mt-3">
                 <a href="<?php echo site_url('catalog'); ?>">Navegar el Catálogo</a>
             </div>
         </div>
@@ -352,4 +370,25 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
             </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background: #fdfdfd; border-radius: 24px; padding: 28px; margin-top: 80px;">
+    <div class="row gy-4">
+        <div class="col-lg-5">
+            <a href="#" class="d-flex align-items-center justify-content-center">
+                <img src = "<?php echo base_url();?>themes/nada52/images/politica.png" class="img-responsive" style="width: 75px;">
+                <p class="text-nowrap mb-0">Politica de divulgacion</p>
+            </a>
+        </div>
+         <div class="col-lg-2 d-flex justify-content-center">
+            <div class="vertical-bar"></div>
+        </div>
+        <div class="col-lg-5">
+            <a href="#" class="d-flex align-items-center justify-content-center">
+                <img src = "<?php echo base_url();?>themes/nada52/images/consulta.png" class="img-responsive" style="width: 75px;">
+                <p class="text-nowrap mb-0">Consulta de datos</p>
+            </a>
+        </div>
+    </div>
+   
 </div>
