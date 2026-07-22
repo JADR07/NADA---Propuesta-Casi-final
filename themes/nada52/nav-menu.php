@@ -1,9 +1,9 @@
 <!-- Start menus -->
 <?php $menus= isset($data['menus']) ? $data['menus'] : false;?>
-<div class="navbar-collapse collapse" id="containerNavbar" aria-expanded="false">
+<div class="navbar-collapse collapse justify-content-center " id="containerNavbar" aria-expanded="false">
 <?php if (isset($menus)): ?>
     <?php $current_page=current_url();?>
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ">
         <?php foreach($menus as $item):?>
             <?php
             if ($item['target']==1){

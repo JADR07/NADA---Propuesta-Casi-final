@@ -287,7 +287,7 @@ $collections=array(
 
 
 
-<div class="container-fluid" style="padding-top:30px;padding-bottom:40px;backgroundx:#eceeef;">
+<div class="container-fluid" style="padding-top:30px;padding-bottom:40px;background:#eceeef;">
 <div class="container" >
 
 <!-- featured publications -->

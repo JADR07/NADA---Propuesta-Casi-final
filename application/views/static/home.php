@@ -226,7 +226,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
                 <h1>Catálogo ANDA</h1>
                 <p>Archivo Nacional de Datos y Metadatos — Accede a datos estadísticos oficiales de la República Dominicana de manera fácil, segura y confiable para la investigación, planificación y toma de decisiones.</p>
             </div>
-            <div class="hero-stats">
+           <!--  <div class="hero-stats">
                 <div class="stat-card">
                     <strong><?php echo number_format($survey_count); ?></strong>
                     <span>Operaciones estadísticas</span>
@@ -239,7 +239,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
                     <strong><?php echo number_format($citation_count); ?></strong>
                     <span>Citas publicadas</span>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="hero-search">
