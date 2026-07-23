@@ -82,12 +82,12 @@ body {
     padding: 0 22px;
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
     background: rgba(255,255,255,.14);
-    color: #fff;
+    color: #000000;
     flex: 1;
     min-width: 0;
 }
 .home-hero .hero-search input::placeholder {
-    color: rgba(114, 113, 113, 0.72);
+    color: rgba(109, 108, 108, 0.72);
 }
 .home-hero .hero-search button {
     min-height: 56px;
@@ -240,6 +240,106 @@ body {
         border-radius: 999px;
     }
 }
+    @media (max-width: 992px) {
+    .wp-page-body {
+        margin: 0 auto;
+    }
+    .home-hero {
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 24px;
+        margin-top: 40px;
+    }
+    /* Centrar texto */
+    .home-hero,
+    .home-grid-section,
+    .home-category-card
+    .home-latest-changes {
+        text-align: center;
+    }
+
+    .input-group .form-control {
+        margin: 0 auto;
+        display: block;
+        width: 25%;
+        border-radius: 24px !important ;
+        max-width: 600px;
+        margin-bottom: 10px;
+
+        
+    }
+
+    /* Centrar filas de Bootstrap */
+    .row {
+        justify-content: center;
+    }
+
+    /* Centrar botones */
+    .btn,
+    .btn-primary {
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Centrar imágenes */
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Centrar contenido flex */
+    .d-flex {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 931px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1,
+    .hero p {
+        max-width: 700px;
+    }
+
+
+}
+
+@media (min-width: 700px) and (max-width: 922px) {
+    .wp-page-body,
+    .home-hero,
+    .home-grid-section,
+    .home-categories {
+        margin: 0 auto;
+        max-width: 920px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .home-hero {
+        width: 100%;
+        max-width: 900px;
+        border-radius: 24px;
+    }
+
+    .home-hero,
+    .home-grid-section,
+    .home-category-card,
+    .home-latest-changes {
+        text-align: center;
+    }
+
+    .input-group .form-control {
+        width: 80%;
+        margin: 0 auto 10px;
+    }
+}
+
 </style>
 <?php
 $this->template->add_variable("body_class","container-fluid-full");
@@ -372,23 +472,4 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
     </div>
 </div>
 
-<div class="container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background: #fdfdfd; border-radius: 24px; padding: 28px; margin-top: 80px;">
-    <div class="row gy-4">
-        <div class="col-lg-5">
-            <a href="#" class="d-flex align-items-center justify-content-center">
-                <img src = "<?php echo base_url();?>themes/nada52/images/politica.png" class="img-responsive" style="width: 75px;">
-                <p class="text-nowrap mb-0">Politica de divulgacion</p>
-            </a>
-        </div>
-         <div class="col-lg-2 d-flex justify-content-center">
-            <div class="vertical-bar"></div>
-        </div>
-        <div class="col-lg-5">
-            <a href="#" class="d-flex align-items-center justify-content-center">
-                <img src = "<?php echo base_url();?>themes/nada52/images/consulta.png" class="img-responsive" style="width: 75px;">
-                <p class="text-nowrap mb-0">Consulta de datos</p>
-            </a>
-        </div>
-    </div>
-   
-</div>
+

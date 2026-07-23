@@ -4,6 +4,12 @@
     color: #fff;
     padding: 20px 0;
 }
+
+@media (max-width: 767px) {
+    .footer-query {
+        display: none;
+    }
+}
 </style>
 
 <footer>
@@ -11,6 +17,26 @@
     <?php //include_once 'footer_top.php';?>
     <!-- End footer top section -->
 
+    <div class="container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background: #fdfdfd; border-radius: 24px; padding: 28px; margin-top: 60px;">
+    <div class="row gy-4">
+        <div class="col-lg-5">
+            <a href="#" class="d-flex align-items-center justify-content-center">
+                <img src = "<?php echo base_url();?>themes/nada52/images/politica.png" class="img-responsive" style="width: 75px;">
+                <p class="text-nowrap mb-0">Politica de divulgacion</p>
+            </a>
+        </div>
+         <div class="col-lg-2 d-flex justify-content-center">
+            <div class="vertical-bar"></div>
+        </div>
+        <div class="col-lg-5">
+            <a href="#" class="d-flex align-items-center justify-content-center">
+                <img src = "<?php echo base_url();?>themes/nada52/images/consulta.png" class="img-responsive" style="width: 75px;">
+                <p class="text-nowrap mb-0">Consulta de datos</p>
+            </a>
+        </div>
+    </div>
+   
+</div>
     <!-- footer bottom section -->
     <div class="full-row-footer-black-components">
         <div class="container">
@@ -38,7 +64,7 @@
                     <!-- / footer logo -->
 
                     <!-- Copyrights-->
-                    <div class="col-12 col-md-6 footer-bottom-right">
+                    <div class="footer-query col-12 col-md-6 footer-bottom-right">
                         <div class="">
                             <div class="footer-copy-right">
 
@@ -66,7 +92,7 @@
 
                      <div class="col-12 col-md-6">
                         <div class="text-center text-lg-right mt-2">
-                            <img src="<?php echo base_url();?>themes/nada52/images/one-footer.jpg" class="img-responsive" style="width: 100px;">
+                            <img src="<?php echo base_url();?>themes/nada52/images/one-footer.png" class="img-responsive" style="width: 100px;">
                         </div>
                      </div>
                 </div>

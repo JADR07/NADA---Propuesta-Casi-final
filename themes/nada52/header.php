@@ -1,11 +1,11 @@
-<style>
+<!-- <style>
 .site-header .navbar-light .no-logo .navbar-brand--sitename {border:0px!important;margin-left:0px}
 .site-header .navbar-light .no-logo .nada-site-title {font-size:18px;}
 .navbar-brand {
     height: 90px;
     width: auto;
 }
-</style>
+</style> -->
 <header class="site-header">
     <?php /*?>
     <div class="container-fluid wb-user-bar">
@@ -64,7 +64,8 @@
                     <?php /**/?>
                     
 
-                    <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar"
+                     aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                         <!-- Start menus -->
