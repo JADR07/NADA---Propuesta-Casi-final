@@ -5,11 +5,13 @@
     padding: 20px 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 820px) {
     .footer-query {
-        display: none;
+        display: none !important;
     }
 }
+
+
 </style>
 
 <footer>
@@ -17,7 +19,7 @@
     <?php //include_once 'footer_top.php';?>
     <!-- End footer top section -->
 
-    <div class="container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background: #fdfdfd; border-radius: 24px; padding: 28px; margin-top: 60px;">
+    <div class="footer-query container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background: #fdfdfd; border-radius: 24px; padding: 28px; margin-top: 60px;">
     <div class="row gy-4">
         <div class="col-lg-5">
             <a href="#" class="d-flex align-items-center justify-content-center">
@@ -64,7 +66,7 @@
                     <!-- / footer logo -->
 
                     <!-- Copyrights-->
-                    <div class="footer-query col-12 col-md-6 footer-bottom-right">
+                    <div class=" col-12 col-md-6 footer-bottom-right">
                         <div class="">
                             <div class="footer-copy-right">
 

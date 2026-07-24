@@ -237,8 +237,10 @@ body {
     }
     .home-hero .hero-search input,
     .home-hero .hero-search button {
-        border-radius: 999px;
+        border-radius: 100px;
+        width: 50%;
     }
+
 }
     @media (max-width: 992px) {
     .wp-page-body {
@@ -310,7 +312,7 @@ body {
 
 }
 
-@media (min-width: 700px) and (max-width: 922px) {
+/* @media (min-width: 700px) and (max-width: 922px) {
     .wp-page-body,
     .home-hero,
     .home-grid-section,
@@ -337,6 +339,13 @@ body {
     .input-group .form-control {
         width: 80%;
         margin: 0 auto 10px;
+    }
+} */
+
+@media (max-width: 375px) {
+    .home-hero .hero-inner .hero-top .hero-brand p {
+        font-size: 15px;
+        margin-right: 13px !important;
     }
 }
 
