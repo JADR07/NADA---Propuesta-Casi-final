@@ -6,6 +6,7 @@
     width: auto;
 }
 </style> -->
+   
 <header class="site-header">
     <?php /*?>
     <div class="container-fluid wb-user-bar">
@@ -30,7 +31,7 @@
                 <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
                     <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
                         <img src="<?php echo base_url();?>themes/nada52/images/anda-logo.png"
-                        class="logo"
+                        class="logo-anda"
                         alt="ANDA Logo">
                     </a>
                     <?php /**
@@ -75,7 +76,7 @@
                 <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
                     <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
                         <img src="<?php echo base_url();?>themes/nada52/images/one-logo.png"
-                        class="logo"
+                        class="logo-one"
                         alt="ANDA Logo">
                     </a>
                 </nav>
