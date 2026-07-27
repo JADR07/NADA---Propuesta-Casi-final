@@ -10,7 +10,7 @@ body {
     padding: 60px 0 40px;
     position: relative;
     top: -40px;
-    background-image: url('<?php echo base_url();?>themes/nada52/images/hero-banner-bg.svg');
+    background-image: url('<?php echo base_url();?>themes/nada52/images/banner-anda.png');
     background-size: cover;
 }
 .home-hero .hero-inner {
@@ -211,6 +211,10 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.home-category-card-content img {
+     clip-path: inset(1px);
 }
 
 .vertical-bar {

@@ -5,6 +5,10 @@
     padding: 20px 0;
 }
 
+.logo-one-container div img {
+     clip-path: inset(1px);
+}
+
 @media (max-width: 820px) {
     .footer-query {
         display: none !important;
@@ -92,7 +96,7 @@
                     </div>
                     <!-- / Copyrights  -->
 
-                     <div class="col-12 col-md-6">
+                     <div class="logo-one-container col-12 col-md-6">
                         <div class="text-center text-lg-right mt-2">
                             <img src="<?php echo base_url();?>themes/nada52/images/one-footer.png" class="img-responsive" style="width: 100px;">
                         </div>

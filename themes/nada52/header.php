@@ -6,7 +6,13 @@
     width: auto;
 }
 </style> -->
-   
+
+<style>
+.navbar a img {
+  width: 170px;
+   clip-path: inset(1px);
+}
+</style>
 <header class="site-header">
     <?php /*?>
     <div class="container-fluid wb-user-bar">
@@ -30,7 +36,7 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
                     <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
-                        <img src="<?php echo base_url();?>themes/nada52/images/anda-logo.png"
+                        <img src="<?php echo base_url();?>themes/nada52/images/anda-logo-header.png"
                         class="logo-anda"
                         alt="ANDA Logo">
                     </a>
@@ -75,7 +81,7 @@
                     
                 <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
                     <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
-                        <img src="<?php echo base_url();?>themes/nada52/images/one-logo.png"
+                        <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
                         class="logo-one"
                         alt="ANDA Logo">
                     </a>
