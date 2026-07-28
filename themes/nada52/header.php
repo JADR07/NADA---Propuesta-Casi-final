@@ -80,7 +80,7 @@
                         <!-- Close Menus -->
                     
                 <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
-                    <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
+                    <a class="navbar-brand mr-4" href="https://www.one.gob.do">
                         <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
                         class="logo-one"
                         alt="ANDA Logo">

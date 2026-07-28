@@ -1,8 +1,11 @@
 ﻿<style>
 
 body {
-    background-image: url('<?php echo base_url();?>themes/nada52/images/page-bg-dots.svg');
+    background-image: url('<?php echo base_url();?>themes/nada52/images/page-bg-dots-v3.svg');
+    background-size: cover;      
+    background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;       
 }
 .home-hero {
     background: linear-gradient(135deg, #0e3f87 0%, #1b6dbd 100%);
@@ -401,7 +404,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
     <div class="home-category-grid">
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/icono-uno.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/group-icon.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Censo</h3>
@@ -411,7 +414,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/icono-dos.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/list-icon.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Encuestas</h3>
@@ -421,7 +424,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/icono-tres.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/folder-icon.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Registros Estadísticos</h3>

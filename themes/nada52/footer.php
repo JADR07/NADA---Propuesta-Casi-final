@@ -5,8 +5,13 @@
     padding: 20px 0;
 }
 
-.logo-one-container div img {
+.logo-one-container div img {                  
      clip-path: inset(1px);
+}
+
+img {
+    clip-path: inset(1px);
+    width: 50px !important;
 }
 
 @media (max-width: 820px) {
@@ -25,18 +30,18 @@
 
     <div class="footer-query container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background: #fdfdfd; border-radius: 24px; padding: 28px; margin-top: 60px;">
     <div class="row gy-4">
-        <div class="col-lg-5">
+        <div class="logo-one-container col-lg-5">
             <a href="#" class="d-flex align-items-center justify-content-center">
-                <img src = "<?php echo base_url();?>themes/nada52/images/politica.png" class="img-responsive" style="width: 75px;">
+                <img src = "<?php echo base_url();?>themes/nada52/images/megaphone-footer-icon.png" class="img-responsive" style="width: 75px;">
                 <p class="text-nowrap mb-0">Politica de divulgacion</p>
             </a>
         </div>
          <div class="col-lg-2 d-flex justify-content-center">
             <div class="vertical-bar"></div>
         </div>
-        <div class="col-lg-5">
+        <div class="logo-one-container col-lg-5">
             <a href="#" class="d-flex align-items-center justify-content-center">
-                <img src = "<?php echo base_url();?>themes/nada52/images/consulta.png" class="img-responsive" style="width: 75px;">
+                <img src = "<?php echo base_url();?>themes/nada52/images/question-footer-icon.png" class="img-responsive" style="width: 75px;">
                 <p class="text-nowrap mb-0">Consulta de datos</p>
             </a>
         </div>
