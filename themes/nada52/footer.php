@@ -9,9 +9,24 @@
      clip-path: inset(1px);
 }
 
-img {
+.logo-one-container-f img {
     clip-path: inset(1px);
     width: 50px !important;
+}
+
+@media (max-width: 990px) {
+    .logo-one-container-f img {
+        width: 45px !important;
+    }
+
+    .logo-one-container-f p {
+        font-size: 14px;
+    }
+
+    .vertical-bar {
+        height: 35px;
+    }
+
 }
 
 @media (max-width: 820px) {
@@ -28,18 +43,19 @@ img {
     <?php //include_once 'footer_top.php';?>
     <!-- End footer top section -->
 
-    <div class="footer-query container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background: #fdfdfd; border-radius: 24px; padding: 28px; margin-top: 60px;">
-    <div class="row gy-4">
-        <div class="logo-one-container col-lg-5">
+    <div class="footer-query container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background:
+     #fdfdfd; border-radius: 24px; padding: 28px ; margin-top: 60px; ">
+    <div class="row gy-4 kkk ">
+        <div class="logo-one-container-f col-5">
             <a href="#" class="d-flex align-items-center justify-content-center">
                 <img src = "<?php echo base_url();?>themes/nada52/images/megaphone-footer-icon.png" class="img-responsive" style="width: 75px;">
                 <p class="text-nowrap mb-0">Politica de divulgacion</p>
             </a>
         </div>
-         <div class="col-lg-2 d-flex justify-content-center">
+         <div class="col-2 d-flex justify-content-center">
             <div class="vertical-bar"></div>
         </div>
-        <div class="logo-one-container col-lg-5">
+        <div class="logo-one-container-f col-5">
             <a href="#" class="d-flex align-items-center justify-content-center">
                 <img src = "<?php echo base_url();?>themes/nada52/images/question-footer-icon.png" class="img-responsive" style="width: 75px;">
                 <p class="text-nowrap mb-0">Consulta de datos</p>
