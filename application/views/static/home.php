@@ -315,9 +315,8 @@ body {
     .hero p {
         max-width: 700px;
     }
-
-
 }
+
 
 /* @media (min-width: 700px) and (max-width: 922px) {
     .wp-page-body,

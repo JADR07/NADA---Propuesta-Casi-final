@@ -20,25 +20,6 @@
 .home-banner .banner-right{min-width:260px}
 </style>
 
-<div class="home-banner" style="background-image: url('<?php echo base_url('images/anda-home.jpg');?>');">
-	<div class="banner-inner">
-		<div class="banner-left">
-			<h2>Catálogo ANDA</h2>
-			<p class="lead">Archivo Nacional de Datos y Metadatos — Accede a datos estadísticos oficiales para investigación y toma de decisiones.</p>
-			<form action="<?php echo site_url('catalog/search'); ?>" method="get" class="home-search" role="search">
-				<input type="search" name="q" placeholder="Buscar datasets, variables, temas..." aria-label="Buscar">
-				<button type="submit">Buscar</button>
-			</form>
-		</div>
-		<div class="banner-right">
-			<!-- small stats box area (optional) -->
-			<div class="card" style="background:rgba(255,255,255,0.95);padding:14px;border-radius:8px;color:#0b2b4a">
-				<div style="font-size:22px;font-weight:700">118</div>
-				<div style="font-size:12px">Operaciones estadísticas</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 
 <div class="container-fluid">
