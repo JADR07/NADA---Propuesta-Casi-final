@@ -9,9 +9,41 @@
 
 <style>
 .navbar a img {
-  width: 170px;
+  width: 100%;
    clip-path: inset(1px);
 }
+ .navbar-collapse {
+    white-space: nowrap;
+ }
+
+@media (max-width: 767px) {
+   .anda-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 75px !important;
+    }
+
+    .logo-one {
+        order: 2;
+    }
+
+    .wb-navbar-button-toggler {
+        order: 3;
+        margin-left: auto;
+    }
+}
+
+
+
+
+@media (min-width: 767px) and (max-width: 858px) {
+    .navbar-nav .nav-link {
+        white-space: nowrap;
+    }
+}
+
 </style>
 <header class="site-header">
     <?php /*?>
@@ -33,7 +65,7 @@
         
         <div class="row"> 
             </div>
-            <div class="col-12">
+            <div class="  col-12">
                 <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
                     <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
                         <img src="<?php echo base_url();?>themes/nada52/images/anda-logo-header.png"
@@ -79,11 +111,11 @@
                         <?php require 'nav-menu.php'; ?>
                         <!-- Close Menus -->
                     
-                <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
+                <nav class="one-logo navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
                     <a class="navbar-brand mr-4" href="https://www.one.gob.do">
                         <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
                         class="logo-one"
-                        alt="ANDA Logo">
+                        alt="ONE Logo">
                     </a>
                 </nav>
             </div>

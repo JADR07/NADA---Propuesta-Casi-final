@@ -5,7 +5,8 @@ body {
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;       
+    min-height: 100vh;     
+ 
 }
 .home-hero {
     background: linear-gradient(135deg, #0e3f87 0%, #1b6dbd 100%);

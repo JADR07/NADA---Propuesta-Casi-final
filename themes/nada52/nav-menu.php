@@ -3,7 +3,7 @@
 <div class="navbar-collapse collapse justify-content-center " id="containerNavbar" aria-expanded="false">
 <?php if (isset($menus)): ?>
     <?php $current_page=current_url();?>
-    <ul class="navbar-nav ">
+    <ul class="navbar-nav gap-0">
         <?php foreach($menus as $item):?>
             <?php
             if ($item['target']==1){
