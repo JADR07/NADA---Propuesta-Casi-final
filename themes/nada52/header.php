@@ -8,6 +8,17 @@
 </style> -->
 
 <style>
+
+#containerNavbar{
+    flex: 1;
+    justify-content: center;
+}
+
+.logo-one{
+    margin-left: auto;
+}
+
+
 .navbar a img {
   width: 100%;
    clip-path: inset(1px);
@@ -16,13 +27,61 @@
     white-space: nowrap;
  }
 
-@media (max-width: 767px) {
+
+ .navbar-collapse {
+    text-align: center;
+ }
+
+@media (max-width:750px){
+
+    .wb-navbar > .container-fluid{
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+    }
+
+    /* Botón */
+    .navbar-toggler{
+        order:1;
+        margin-left:initial;
+        /*  width: 20px;
+        height: 20px;
+        background-size: 20px 20px; */
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+    }
+
+    /* Menú */
+    #containerNavbar{
+        order:4;
+        flex:0 0 100%;
+        width:100%;
+    }
+
+    /* Logo ANDA */
+    .navbar-brand:first-of-type{
+        order:2;
+        width:25%;
+        margin-right:auto;
+        /* margin-left: 10px; */
+    }
+
+    /* Logo ONE */
+    .navbar-brand:last-of-type{
+        order:3;
+        width:25%;
+        margin-left:auto;
+    }
+}
+
+/*@media (max-width: 767px) {
    .anda-logo {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: nowrap;
-        width: 75px !important;
     }
 
     .logo-one {
@@ -33,16 +92,9 @@
         order: 3;
         margin-left: auto;
     }
-}
+}*/
 
 
-
-
-@media (min-width: 767px) and (max-width: 858px) {
-    .navbar-nav .nav-link {
-        white-space: nowrap;
-    }
-}
 
 </style>
 <header class="site-header">
@@ -62,62 +114,63 @@
     <?php require 'lang-bar.php';?>
 
     <div class="container-fluid px-0">
-        
         <div class="row"> 
-            </div>
-            <div class="  col-12">
-                <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
-                    <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
-                        <img src="<?php echo base_url();?>themes/nada52/images/anda-logo-header.png"
-                        class="logo-anda"
-                        alt="ANDA Logo">
-                    </a>
-                    <?php /**
-                     * 
-                     * LOGO + Text
-                     **/  ?>
-                    <?php /* ?>
-                    <div class="navbar-brand">
-                        <div class="navbar-brand--logo">
-                            <img src="<?php echo base_url();?>themes/nada52/images/logo.svg" >
+            <div class="col-12">
+                <nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md">
+                    <div class="container-fluid">
+                        <a class="navbar-brand mr-4" href="<?php echo site_url(); ?>">
+                            <img src="<?php echo base_url();?>themes/nada52/images/anda-logo-header.png"
+                            class="anda-logo"
+                            alt="ANDA Logo">
+                        </a>
+                        <?php /**
+                         * 
+                         * LOGO + Text
+                         **/  ?>
+                        <?php /* ?>
+                        <div class="navbar-brand">
+                            <div class="navbar-brand--logo">
+                                <img src="<?php echo base_url();?>themes/nada52/images/logo.svg" >
+                            </div>
+                            <div class="navbar-brand--sitename">
+                                <div><a class="nada-site-title" href="<?php echo site_url(); ?>"><?php echo $this->config->item("website_title"); ?></a></div>
+                                <div class="nada-site-subtitle">An Online Microdata Catalog</div>
+                            </div>
                         </div>
-                        <div class="navbar-brand--sitename">
-                            <div><a class="nada-site-title" href="<?php echo site_url(); ?>"><?php echo $this->config->item("website_title"); ?></a></div>
-                            <div class="nada-site-subtitle">An Online Microdata Catalog</div>
+                        <?php */ ?>
+
+
+                        <?php /**
+                         * 
+                         * text only 
+                         **/  ?>
+                        <?php /**/ ?>
+                    <!--  <div class="navbar-brand no-logo">
+                            <div class="navbar-brand--sitename">
+                                <div><a class="nada-site-title" href="<?php echo site_url(); ?>"><?php echo $this->config->item("website_title"); ?></a></div>
+                                <div class="nada-site-subtitle">Data Catalog</div>
+                            </div>
                         </div>
+                        <?php /**/?> -->
+                        
+
+                      <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar"
+                        aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                            <!-- Start menus -->
+                            <?php require 'nav-menu.php'; ?>
+                            <!-- Close Menus -->
+                        
+    
+                        <a class="navbar-brand mr-4" href="https://www.one.gob.do">
+                            <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
+                            class="logo-one"
+                            alt="ONE Logo">
+                        </a>
                     </div>
-                    <?php */ ?>
-
-
-                    <?php /**
-                     * 
-                     * text only 
-                     **/  ?>
-                    <?php /**/ ?>
-                   <!--  <div class="navbar-brand no-logo">
-                        <div class="navbar-brand--sitename">
-                            <div><a class="nada-site-title" href="<?php echo site_url(); ?>"><?php echo $this->config->item("website_title"); ?></a></div>
-                            <div class="nada-site-subtitle">Data Catalog</div>
-                        </div>
-                    </div> -->
-                    <?php /**/?>
-                    
-
-                    <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar"
-                     aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                        <!-- Start menus -->
-                        <?php require 'nav-menu.php'; ?>
-                        <!-- Close Menus -->
-                    
-                <nav class="one-logo navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
-                    <a class="navbar-brand mr-4" href="https://www.one.gob.do">
-                        <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
-                        class="logo-one"
-                        alt="ONE Logo">
-                    </a>
-                </nav>
+                </nav> 
+                <!-- </nav> -->
             </div>
 
         </div>

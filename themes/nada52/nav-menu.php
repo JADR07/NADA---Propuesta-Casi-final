@@ -19,7 +19,8 @@
             ?>
             <?php $this->template->write('title', $item['title'],true);?>
             <li class="nav-item">
-                <a <?php echo $target; ?> <?php echo ($item['url']==$current_page) ? 'class="nav-link active"' : ''; ?> class="nav-link" href="<?php echo html_escape($item['url']);?>"><?php echo $item['title'];?></a>
+                <!-- class="nav-link active" - -->
+                <a <?php echo $target; ?> <?php echo ($item['url']==$current_page) ? '' : ''; ?> class="nav-link" href="<?php echo html_escape($item['url']);?>"><?php echo $item['title'];?></a>
             </li>            
         <?php endforeach; ?>
 
