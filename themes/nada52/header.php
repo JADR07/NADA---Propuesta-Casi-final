@@ -9,73 +9,134 @@
 
 <style>
 
-#containerNavbar{
+#containerNavbar {
     flex: 1;
     justify-content: center;
 }
 
-.logo-one{
+.navbar-collapse {
+    text-align: center;
+}
+
+.logo-one {
     margin-left: auto;
 }
 
-
 .navbar a img {
-  width: 100%;
-   clip-path: inset(1px);
+    width: 75%;
+    height: auto;
+    clip-path: inset(1px);
 }
- .navbar-collapse {
-    white-space: nowrap;
- }
 
 
- .navbar-collapse {
-    text-align: center;
- }
 
-@media (max-width:750px){
+@media (max-width: 750px) {
 
-    .wb-navbar > .container-fluid{
-        display:flex;
-        flex-wrap:wrap;
-        align-items:center;
+    
+    /* Contenedor principal */
+    .navbar > .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
     }
 
-    /* Botón */
-    .navbar-toggler{
-        order:1;
-        margin-left:initial;
-        /*  width: 20px;
-        height: 20px;
-        background-size: 20px 20px; */
+    /* ================================
+       LOGO ANDA
+    ================================= */
+
+    .navbar-brand:first-child {
+        order: 2;
+        margin: 0 3px !important;
+        flex-shrink: 0;
+    }
+
+    /* ================================
+       BOTÓN HAMBURGUESA
+    ================================= */
+
+    .navbar-toggler {
+        order: 1 !important;
+        margin: 0 5px 0 0 !important;
+        flex-shrink: 0;
     }
 
     .navbar-toggler-icon {
         width: 20px;
+        height: 20px;
     }
 
-    /* Menú */
-    #containerNavbar{
-        order:4;
-        flex:0 0 100%;
-        width:100%;
+    /* ================================
+       MENU
+    ================================= */
+
+    #containerNavbar {
+        order: 5;
+
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 10px;
+        text-align: center;
     }
 
-    /* Logo ANDA */
-    .navbar-brand:first-of-type{
-        order:2;
-        width:25%;
-        margin-right:auto;
-        /* margin-left: 10px; */
+    #containerNavbar.navbar-collapse {
+        flex-basis: 100%;
     }
 
-    /* Logo ONE */
-    .navbar-brand:last-of-type{
-        order:3;
-        width:25%;
-        margin-left:auto;
+    #containerNavbar .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #containerNavbar .nav-item {
+        width: 100%;
+    }
+
+    #containerNavbar .nav-link {
+        white-space: nowrap;
+    }
+
+    /* ================================
+       LOGO ONE
+    ================================= */
+
+    .navbar-toggler + #containerNavbar + .navbar-brand {
+        order: 3;
+        margin: 0 3px !important;
+        flex-shrink: 0;
+    }
+
+    /* ================================
+       LOGO HACIENDA
+    ================================= */
+
+    .navbar-toggler + #containerNavbar + .navbar-brand + .navbar-brand {
+        order: 4;
+        margin: 0 3px !important;
+        flex-shrink: 0;
+    }
+
+    /* ================================
+       IMÁGENES
+    ================================= */
+
+    .anda-logo,
+    .logo-one,
+    .hacienda-logo {
+        width: 75px !important;
+        max-width: 75px;
+        height: auto;
+    }
+
+    /* Anular margin-left:auto de desktop */
+    .logo-one {
+        margin-left: 0 !important;
     }
 }
-
 /*@media (max-width: 767px) {
    .anda-logo {
         display: flex;
@@ -162,11 +223,19 @@
                             <?php require 'nav-menu.php'; ?>
                             <!-- Close Menus -->
                         
-    
-                        <a class="navbar-brand mr-4" href="https://www.one.gob.do">
+
+                        
+
+                        <a class="navbar-brand" href="https://www.one.gob.do">
                             <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
                             class="logo-one"
                             alt="ONE Logo">
+                        </a>
+
+                        <a class="navbar-brand" href="https://www.one.gob.do">
+                            <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
+                            class="hacienda-logo"
+                            alt="HACIENDA Logo">
                         </a>
                     </div>
                 </nav> 
