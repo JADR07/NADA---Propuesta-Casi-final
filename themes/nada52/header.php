@@ -33,7 +33,10 @@
 @media (max-width: 750px) {
 
     
-    /* Contenedor principal */
+   /* =================================
+       CONTENEDOR PRINCIPAL
+    ================================= */
+
     .navbar > .container-fluid {
         display: flex;
         flex-wrap: wrap;
@@ -41,17 +44,8 @@
         width: 100%;
     }
 
-    /* ================================
-       LOGO ANDA
-    ================================= */
 
-    .navbar-brand:first-child {
-        order: 2;
-        margin: 0 3px !important;
-        flex-shrink: 0;
-    }
-
-    /* ================================
+    /* =================================
        BOTÓN HAMBURGUESA
     ================================= */
 
@@ -66,8 +60,59 @@
         height: 20px;
     }
 
-    /* ================================
-       MENU
+
+    /* =================================
+       LOGO ANDA
+    ================================= */
+
+    .logo-anda-container {
+        order: 2;
+        margin: 0 3px !important;
+        flex-shrink: 0;
+    }
+
+
+    /* =================================
+       LOGO ONE
+    ================================= */
+
+    .logo-one-container {
+        order: 3;
+        margin: 0 3px !important;
+        flex-shrink: 0;
+    }
+
+    .logo-one {
+        margin-left: 0 !important;
+    }
+
+
+    /* =================================
+       LOGO HACIENDA
+    ================================= */
+
+    .logo-hacienda-container {
+        order: 4;
+        margin: 0 3px !important;
+        flex-shrink: 0;
+    }
+
+
+    /* =================================
+       TAMAÑO DE LOGOS
+    ================================= */
+
+    .anda-logo,
+    .logo-one,
+    .hacienda-logo {
+        width: 75px !important;
+        max-width: 75px;
+        height: auto;
+    }
+
+
+    /* =================================
+       MENÚ
     ================================= */
 
     #containerNavbar {
@@ -81,9 +126,11 @@
         text-align: center;
     }
 
+
     #containerNavbar.navbar-collapse {
         flex-basis: 100%;
     }
+
 
     #containerNavbar .navbar-nav {
         width: 100%;
@@ -92,49 +139,14 @@
         align-items: center;
     }
 
+
     #containerNavbar .nav-item {
         width: 100%;
     }
 
+
     #containerNavbar .nav-link {
         white-space: nowrap;
-    }
-
-    /* ================================
-       LOGO ONE
-    ================================= */
-
-    .navbar-toggler + #containerNavbar + .navbar-brand {
-        order: 3;
-        margin: 0 3px !important;
-        flex-shrink: 0;
-    }
-
-    /* ================================
-       LOGO HACIENDA
-    ================================= */
-
-    .navbar-toggler + #containerNavbar + .navbar-brand + .navbar-brand {
-        order: 4;
-        margin: 0 3px !important;
-        flex-shrink: 0;
-    }
-
-    /* ================================
-       IMÁGENES
-    ================================= */
-
-    .anda-logo,
-    .logo-one,
-    .hacienda-logo {
-        width: 75px !important;
-        max-width: 75px;
-        height: auto;
-    }
-
-    /* Anular margin-left:auto de desktop */
-    .logo-one {
-        margin-left: 0 !important;
     }
 }
 /*@media (max-width: 767px) {
