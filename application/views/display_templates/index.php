@@ -1,8 +1,18 @@
+<style>
+.custom-cat {
+     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+}
+</style>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
             <div class="navbar-collapse sticky-top metadata-sidebar-container">
-            <div class="nav flex-column">
+            <div class="custom-cat nav flex-column">
             <?php foreach($sidebar as $key=>$item):?>
                 <li class="nav-item">                    
                     <a class="nav-link" href="#<?php echo str_replace(".",".",$key);?>"><?php echo tt(strtolower($item),$item);?></a>

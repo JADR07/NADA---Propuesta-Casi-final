@@ -1,12 +1,13 @@
 ﻿<style>
 
+
 body {
     background-image: url('<?php echo base_url();?>themes/nada52/images/page-bg-dots-v3.svg');
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;     
- 
+
 }
 .home-hero {
     background: linear-gradient(135deg, #0e3f87 0%, #1b6dbd 100%);
@@ -111,7 +112,7 @@ body {
 }
 .home-category-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
     gap: 20px;
 }
 .home-category-card {
@@ -431,6 +432,16 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
                 <p>Registros administrativos y operaciones continuas.</p>
             </div>
             <a href="<?php echo site_url('catalog?sk=Registro'); ?>">Ver Registros →</a>
+        </article>
+        <article class="home-category-card">
+            <div class="home-category-card-content">
+                <img src="<?php echo base_url();?>themes/nada52/images/logo-fuentes-nt.png"
+                class="logo-catalog"
+                alt="ANDA Logo">
+                <h3>Fuentes no tradicionales</h3>
+                <p>Fuentes no tradicionales</p>
+            </div>
+            <a href="<?php echo site_url('catalog?sk=Censo'); ?>">Ver Fuentes →</a>
         </article>
     </div>
 </div>
