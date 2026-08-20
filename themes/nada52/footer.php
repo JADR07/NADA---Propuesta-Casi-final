@@ -1,7 +1,7 @@
 <style>
 
 footer {
-margin-top: 150px;
+margin-top: 150px; 
 }
 
 .full-row-footer-black-components  {
