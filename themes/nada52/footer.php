@@ -1,4 +1,9 @@
 <style>
+
+footer {
+margin-top: 150px;
+}
+
 .full-row-footer-black-components  {
     background-color: #17436F !important; 
     color: #fff;
