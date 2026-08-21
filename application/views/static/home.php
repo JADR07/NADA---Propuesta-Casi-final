@@ -72,7 +72,7 @@ body {
 }
 .home-hero .hero-search {
     margin-top: 32px;
-    max-width: 860px;
+    max-width: 75%;
 }
 .home-hero .hero-search .input-group {
     display: flex;
@@ -231,15 +231,83 @@ body {
     white-space: nowrap;
 }
 @media (max-width: 992px) {
+
+.home-hero {
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 24px;
+        margin-top: 40px;
+        box-sizing: border-box;
+    }
+
+    .home-hero .hero-inner {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
     .home-hero .hero-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-hero .hero-brand {
+        min-width: 0;
+        width: 100%;
+        flex: none;
+        box-sizing: border-box;
+    }
+
+    .home-hero .hero-brand h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .home-hero .hero-brand p {
+        max-width: 100%;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .home-hero .hero-search {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .home-hero .hero-search .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-hero .hero-search input,
+    .home-hero .hero-search button {
+        width: 80%;
+        max-width: 400px;
+        border-radius: 100px !important;
+        margin: 0 auto 10px;
+        box-sizing: border-box;
+    }
+
+    .home-hero .hero-actions {
+        text-align: center;
+    }
+
+    .home-category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+    /* .home-hero .hero-top {
         flex-direction: column;
     }
     .home-hero .hero-stats {
         grid-template-columns: repeat(2, minmax(140px, 1fr));
     }
-    .home-category-grid {
-        grid-template-columns: 1fr;
-    }
+    
     .home-hero .hero-search .input-group {
         flex-direction: column;
     }
@@ -248,8 +316,8 @@ body {
         border-radius: 100px;
         width: 50%;
     }
+ */
 
-}
     @media (max-width: 992px) {
     .wp-page-body {
         margin: 0 auto;
@@ -435,8 +503,9 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
     </div>
 </div>
 
+
 <div class="container home-grid-section">
-    <div class="row gy-4">
+    <div class="row gy-4 gx-0">
         <div class="col-lg-7">
             <div class="home-latest-changes">
                 <h2>Últimos cambios en el catálogo</h2>
@@ -487,5 +556,4 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
         </div>
     </div>
 </div>
-
 

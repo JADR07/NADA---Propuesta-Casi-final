@@ -97,7 +97,7 @@
 
                                 <p class="text-center text-lg-right">
 
-                                    <small style="white-space: nowrap;">
+                                    <small>
                                         ©
                                         <script language="JavaScript">
                                             var time = new Date();
