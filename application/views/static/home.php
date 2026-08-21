@@ -111,7 +111,7 @@ body {
 }
 .home-category-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
     gap: 20px;
 }
 .home-category-card {
