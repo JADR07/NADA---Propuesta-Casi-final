@@ -500,6 +500,16 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
             </div>
             <a href="<?php echo site_url('catalog?sk=Registro'); ?>">Ver Registros →</a>
         </article>
+        <article class="home-category-card">
+            <div class="home-category-card-content">
+                <img src="<?php echo base_url();?>themes/nada52/images/logo-fuentes-nt.png"
+                class="logo-catalog"
+                alt="ANDA Logo">
+                <h3>Fuentes no tradicionales</h3>
+                <p>Fuentes no tradicionales</p>
+            </div>
+            <a href="<?php echo site_url('catalog?sk=Censo'); ?>">Ver Fuentes →</a>
+        </article>
     </div>
 </div>
 
