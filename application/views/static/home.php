@@ -194,6 +194,14 @@ body {
     place-items: center;
     font-size: 1.2rem;
 }
+.flecha {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    clip-path: inset(1px);
+    display: inline-block;
+}
+
 .home-why .why-content h3 {
     margin: 0 0 6px;
     font-size: 1rem;
@@ -208,6 +216,7 @@ body {
     height: 60px;
     width: auto;
     margin-bottom: 15px;
+    clip-path: inset(1px);
 }
 
 .home-category-card-content {
@@ -363,6 +372,7 @@ body {
     img {
         display: block;
         margin: 0 auto;
+        background: transparent;
     }
 
     /* Centrar contenido flex */
@@ -438,7 +448,8 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
         <div class="hero-top">
             <div class="hero-brand">
                 <h1>Catálogo ANDA</h1>
-                <p>Archivo Nacional de Datos y Metadatos — Accede a datos estadísticos oficiales de la República Dominicana de manera fácil, segura y confiable para la investigación, planificación y toma de decisiones.</p>
+                <p>Archivo Nacional de Datos y Metadatos — El Catálogo ANDA es la plataforma oficial que centraliza y difunde los metadatos de las operaciones estadísticas 
+                    de la República Dominicana, permitiendo su consulta y exploración, y facilitando el conocimiento de sus características, fuentes de información, metodologías y condiciones de acceso.</p>
             </div>
            <!--  <div class="hero-stats">
                 <div class="stat-card">
@@ -472,43 +483,51 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
     <div class="home-category-grid">
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/group-icon.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/grupo-icono.png"
                 class="logo-catalog"
-                alt="ANDA Logo">
+                alt="ANDA Logo"
                 <h3>Censo</h3>
                 <p>Información recopilada en operativos censales nacionales.</p>
             </div>
-            <a href="<?php echo site_url('catalog?sk=Censo'); ?>">Ver Censo →</a>
+            <a href="<?php echo site_url('catalog?sk=Censo'); ?>">Ver Censo 
+                 <img src="<?php echo base_url();?>themes/nada52/images/flecha-icon.png" class="flecha" alt="Flecha">
+            </a>
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/list-icon.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/lista-icono.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Encuestas</h3>
                 <p>Datos obtenidos a través de encuestas por muestreo.</p>
             </div>
-            <a href="<?php echo site_url('catalog?sk=Encuesta'); ?>">Ver Encuestas →</a>
+            <a href="<?php echo site_url('catalog?sk=Encuesta'); ?>">Ver Encuestas 
+                <img src="<?php echo base_url();?>themes/nada52/images/flecha-icon.png" class="flecha" alt="Flecha">
+            </a>
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/folder-icon.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/carpeta-icono.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Registros Estadísticos</h3>
                 <p>Registros administrativos y operaciones continuas.</p>
             </div>
-            <a href="<?php echo site_url('catalog?sk=Registro'); ?>">Ver Registros →</a>
+            <a href="<?php echo site_url('catalog?sk=Registro'); ?>">Ver Registros 
+                <img src="<?php echo base_url();?>themes/nada52/images/flecha-icon.png" class="flecha" alt="Flecha">
+            </a>
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/logo-fuentes-nt.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/fuentes-nt-icono.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Fuentes no tradicionales</h3>
                 <p>Fuentes no tradicionales</p>
             </div>
-            <a href="<?php echo site_url('catalog?sk=Censo'); ?>">Ver Fuentes →</a>
+            <a href="<?php echo site_url('catalog?sk=Censo'); ?>">Ver Fuentes 
+                <img src="<?php echo base_url();?>themes/nada52/images/flecha-icon.png" class="flecha" alt="Flecha">
+            </a>
         </article>
     </div>
 </div>

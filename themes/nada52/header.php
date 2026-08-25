@@ -214,20 +214,20 @@
                  * text only 
                  **/  ?>
                 <?php /**/ ?>
-                <a class="navbar-brand" href="<?php echo site_url(); ?>">
+                <a class="logo-anda-container" href="<?php echo site_url(); ?>">
                     <img src="<?php echo base_url();?>themes/nada52/images/anda-logo-header.png"
                     class="anda-logo"
                     alt="ANDA Logo">
                 </a>
 
-                <a class="navbar-brand" href="https://www.one.gob.do">
+                <a class="logo-one-container" href="https://www.one.gob.do">
                     <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
                     class="logo-one"
                     alt="ONE Logo">
                 </a>
 
-                <a class="navbar-brand" href="https://www.one.gob.do">
-                    <img src="<?php echo base_url();?>themes/nada52/images/one-logo-header.png"
+                <a class="logo-hacienda-container" href="https://www.hacienda.gob.do">
+                    <img src="<?php echo base_url();?>themes/nada52/images/hacienda-logo-header.png"
                     class="hacienda-logo"
                     alt="HACIENDA Logo">
                 </a>
