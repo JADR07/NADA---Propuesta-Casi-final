@@ -1,7 +1,7 @@
-<style>
+﻿<style>
 
 footer {
-margin-top: 150px; 
+margin-top: 150px;
 }
 
 .full-row-footer-black-components  {
@@ -10,6 +10,9 @@ margin-top: 150px;
     padding: 20px 0;
 }
 
+.logo-one-container {
+    margin-left:auto;
+}
 .logo-one-container div img {                  
      clip-path: inset(1px);
 }
@@ -18,6 +21,7 @@ margin-top: 150px;
     clip-path: inset(1px);
     width: 50px !important;
 }
+
 
 @media (max-width: 990px) {
     .logo-one-container-f img {
@@ -96,7 +100,7 @@ margin-top: 150px;
                     <!-- / footer logo -->
 
                     <!-- Copyrights-->
-                    <div class=" col-12 col-md-6 footer-bottom-right">
+                    <div class=" col-12 col-md-8 footer-bottom-right">
                         <div class="">
                             <div class="footer-copy-right">
 
@@ -111,7 +115,7 @@ margin-top: 150px;
                                                 year = year + 1900 + ", ";
                                             document.write(year); // End -->
                                         </script> <!-- <?php echo $this->config->item("website_title");?>, All Rights Reserved. -->
-                                                        <?php echo $this->config->item("website_title");?>, All Rights Reserved | Oficina Naional de Estadistica (ONE)
+                                                        <?php echo $this->config->item("website_title");?>, All Rights Reserved | Oficina Nacional de Estadistica (ONE)
                                     </small>
 
                                 </p>
@@ -122,7 +126,7 @@ margin-top: 150px;
                     </div>
                     <!-- / Copyrights  -->
 
-                     <div class="logo-one-container col-12 col-md-6">
+                     <div class="logo-one-container col-12 col-md-3">
                         <div class="text-center text-lg-right mt-2">
                             <img src="<?php echo base_url();?>themes/nada52/images/one-footer.png" class="img-responsive" style="width: 100px;">
                         </div>
