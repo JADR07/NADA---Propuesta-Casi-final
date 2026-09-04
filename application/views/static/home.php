@@ -14,7 +14,7 @@ body {
     color: #fff;
     padding: 60px 0 40px;
     position: relative;
-    top: -40px;
+    top: -30px;
     background-image: url('<?php echo base_url();?>themes/nada52/images/banner-anda.png');
     background-size: cover;
 }
@@ -405,7 +405,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
     <div class="home-category-grid">
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/group-icon.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/grupo-icono.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Censo</h3>
@@ -415,7 +415,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/list-icon.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/lista-icono.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Encuestas</h3>
@@ -425,7 +425,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/folder-icon.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/carpeta-icono.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Registros Estadísticos</h3>
@@ -435,7 +435,7 @@ $latest_surveys = $this->stats_model->get_latest_surveys(5);
         </article>
         <article class="home-category-card">
             <div class="home-category-card-content">
-                <img src="<?php echo base_url();?>themes/nada52/images/logo-fuentes-nt.png"
+                <img src="<?php echo base_url();?>themes/nada52/images/fuentes-nt-icono.png"
                 class="logo-catalog"
                 alt="ANDA Logo">
                 <h3>Fuentes no tradicionales</h3>
