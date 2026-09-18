@@ -19,9 +19,31 @@ margin-top: 150px;
     width: 50px !important;
 }
 
+.hacienda-footer-container-f {
+    clip-path: inset(1px);
+}
+
+
+.hacienda-footer-container-f,
+.one-footer-container-f,
+.worldbank-footer-container-f,
+.hacienda-footer-container-f a,
+.one-footer-container-f a,
+.worldbank-footer-container-f a {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.footer-logo-img {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
 @media (max-width: 990px) {
     .logo-one-container-f img {
-        width: 45px !important;
+        width: 4px !important;
     }
 
     .logo-one-container-f p {
@@ -50,7 +72,7 @@ margin-top: 150px;
 
     <div class="footer-query container-fluid home-grid-section d-flex justify-content-center align-items-center" style="background:
      #fdfdfd; border-radius: 24px; padding: 28px ; margin-top: 60px; ">
-    <div class="row gy-4 kkk ">
+    <div class="row gy-4" style="margin-right: 5px;">
         <div class="logo-one-container-f col-5">
             <a href="#" class="d-flex align-items-center justify-content-center">
                 <img src = "<?php echo base_url();?>themes/nada52/images/megaphone-footer-icon.png" class="img-responsive" style="width: 75px;">
@@ -70,65 +92,59 @@ margin-top: 150px;
    
 </div>
     <!-- footer bottom section -->
-    <div class="full-row-footer-black-components">
-        <div class="container">
-            <div class="footer">
-                <div class="row">
 
-                    <!-- / footer logo -->
-                    <!-- <div class="col-12 col-md-6">
+   <div class="full-row-footer-black-components">
+    <div class="container">
+        <div class="footer">
+            <div class="row justify-content-center align-items-center footer-logos">
 
-                        <div class="text-center text-lg-left mt-2">
-                        <?php /* logo ?>
-                        <a href="<?php echo site_url();?>" class="g01v1-logo nada-logo">
-                            <img style="width:50px;" title="<?php echo $this->config->item("website_title");?>" src="<?php echo base_url().$bootstrap_theme; ?>/images/logo-placeholder.png" class="img-responsive">                            
-                        </a>
-                        <?php */?>
+                <div class="hacienda-footer-container-f col-auto">
+                    <a href="#" class="d-flex align-items-center justify-content-center">
+                        <img src="<?php echo base_url();?>themes/nada52/images/hacienda-footer.png" class="img-responsive footer-logo-img">
+                    </a>
+                </div>
 
-                        <?php /* text only */ ?>
-                        <a href="<?php echo site_url();?>" style="color:white;padding-top:20px;" >
-                            <?php echo $this->config->item("website_title");?>
-                        </a>                        
-                        <?php /* */?>
-                        </div>
+                <div class="one-footer-container-f col-auto">
+                    <a href="#" class="d-flex align-items-center justify-content-center">
+                        <img src="<?php echo base_url();?>themes/nada52/images/one-footer.png" class="img-responsive footer-logo-img">
+                    </a>
+                </div>
 
-                    </div> -->
-                    <!-- / footer logo -->
+                <div class="col-auto d-flex justify-content-center">
+                    <div class="vertical-bar"></div>
+                </div>
 
-                    <!-- Copyrights-->
-                    <div class=" col-12 col-md-6 footer-bottom-right">
-                        <div class="">
-                            <div class="footer-copy-right">
+                <div class="worldbank-footer-container-f col-auto">
+                    <a href="#" class="d-flex align-items-center justify-content-center">
+                        <img src="<?php echo base_url();?>themes/nada52/images/worldbank-footer.png" class="img-responsive footer-logo-img">
+                    </a>
+                </div>
 
-                                <p class="text-center text-lg-right">
+            </div>
+            <!-- / footer logos -->
 
-                                    <small>
-                                        ©
-                                        <script language="JavaScript">
-                                            var time = new Date();
-                                            var year = time.getYear();
-                                            if (year < 2000)
-                                                year = year + 1900 + ", ";
-                                            document.write(year); // End -->
-                                        </script> <!-- <?php echo $this->config->item("website_title");?>, All Rights Reserved. -->
-                                                        <?php echo $this->config->item("website_title");?>, All Rights Reserved | Oficina Naional de Estadistica (ONE)
-                                    </small>
+            <!-- Copyrights -->
+            <div class="row justify-content-center mt-2">
+                <div class="col-12">
+                        <p class="text-center text-light">
 
-                                </p>
+                            <small>
+                                ©
+                                <script language="JavaScript">
+                                    var time = new Date();
+                                    var year = time.getYear();
+                                    if (year < 2000)
+                                        year = year + 1900 + ", ";
+                                    document.write(year); // End -->
+                                <!-- </script> <!-- <?php echo $this->config->item("website_title");?>, All Rights Reserved. -->
+                                                <?php echo $this->config->item("website_title");?>, All Rights Reserved | Oficina Naional de Estadistica (ONE)
+                            </small>
 
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- / Copyrights  -->
-
-                     <div class="logo-one-container col-12 col-md-6">
-                        <div class="text-center text-lg-right mt-2">
-                            <img src="<?php echo base_url();?>themes/nada52/images/one-footer.png" class="img-responsive" style="width: 100px;">
-                        </div>
-                     </div>
+                        </p>
                 </div>
             </div>
+            <!-- / Copyrights -->
+
         </div>
     </div>
-</footer>
+</div>
