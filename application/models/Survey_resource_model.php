@@ -928,6 +928,7 @@ class Survey_resource_model extends CI_Model {
 		if ((int) $resource['survey_id'] !== (int) $survey_id) {
 			throw new Exception('RESOURCE_NOT_FOUND');
 		}
+		
 
 		$user_id=isset($user->id) ? $user->id : false;
 		
