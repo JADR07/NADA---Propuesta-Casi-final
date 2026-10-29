@@ -44,6 +44,15 @@ margin-top: 150px;
     border: none !important;
     box-shadow: none !important;
 }
+
+.hacienda-footer-container-f,
+.one-footer-container-f,
+.worldbank-footer-container-f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
 @media (max-width: 990px) {
     .logo-one-container-f img {
         width: 4px !important;
